@@ -12,8 +12,9 @@
 #include <stdio.h>
 class Day2{
 protected:
-   
+   int value;
 public:
+    int ProcessProgram();
   
 };
 #endif /* Day2_hpp */
