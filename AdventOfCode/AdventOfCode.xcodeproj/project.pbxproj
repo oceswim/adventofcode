@@ -41,7 +41,7 @@
 		1141B2B2239536400087B965 = {
 			isa = PBXGroup;
 			children = (
-				1141B2BD239536400087B965 /* AdventOfCode */,
+				1141B2BD239536400087B965 /* AdventOfCode1 */,
 				1141B2BC239536400087B965 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1141B2BD239536400087B965 /* AdventOfCode */ = {
+		1141B2BD239536400087B965 /* AdventOfCode1 */ = {
 			isa = PBXGroup;
 			children = (
 				1141B2BE239536400087B965 /* main.cpp */,
 			);
-			path = AdventOfCode;
+			path = AdventOfCode1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
