@@ -10,11 +10,15 @@
 #define Day2_hpp
 
 #include <stdio.h>
+#include <vector>
+using namespace std;
 class Day2{
 protected:
    int value;
+   int value2;
+   bool go;
 public:
-    int ProcessProgram();
-  
+    int ProcessProgram(int one,int two);
+    int ProcessRandom();
 };
 #endif /* Day2_hpp */

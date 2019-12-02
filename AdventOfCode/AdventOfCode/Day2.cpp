@@ -14,7 +14,7 @@
 #include <vector>
 #include "Day2.hpp"
 using namespace std;
-int Day2::ProcessProgram()
+int Day2::ProcessProgram(int one,int two)
 {
      string x;
      string theNumber;
@@ -33,13 +33,14 @@ int Day2::ProcessProgram()
      istringstream ss(theNumber);
      int myNumber;
      string token;
-     vector<int> data;
+    vector<int> data;
      while(getline(ss, token, ',')) {
          myNumber = stoi(token);
          data.push_back(myNumber);
      }
-    data[1] = 12;
-    data[2] = 2;
+    data[1] = one;
+    data[2] = two;
+
     int stop=0;
     for (int i = 0; i<data.size();i++)
     {
@@ -47,8 +48,8 @@ int Day2::ProcessProgram()
         {
             case 1:
             {
-                int firstNum =data[data[i+1]];
-                int secondNum =data[data[i+2]];
+                int firstNum =data[data[i+1]];//noun
+                int secondNum =data[data[i+2]];//verb
                 data[data[i+3]] = firstNum + secondNum;
                 i=i+3;
                 break;
@@ -76,3 +77,21 @@ int Day2::ProcessProgram()
  
     return value;
 }
+
+int Day2::ProcessRandom()
+{
+    int result =0;
+    while(result!=19690720)
+    {
+        int v1 = rand() % 100;         // v1 in the range 0 to 99
+        int v2 = rand() % 100;         // v1 in the range 0 to 99
+        result = ProcessProgram(v1, v2);
+        if(result==19690720)
+        {
+            value2 = 100*v1+v2;
+        }
+    }
+    return value2;
+}
+
+
