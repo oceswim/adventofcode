@@ -15,7 +15,9 @@ using namespace std;
 class Day4
 {
 public:
-    int count=0;
-    int password();
+    int count1=0;
+    int count2=0;
+    int password1();
+    int password2();
 };
 #endif /* Day4_hpp */

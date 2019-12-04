@@ -13,7 +13,7 @@
 #include <sstream>
 #include <vector>
 using namespace std;
-int Day4::password()
+int Day4::password1()
 {
     int data[6];
     int temp,temp1,counter,doubleOk;
@@ -34,7 +34,7 @@ int Day4::password()
         {
             if(data[0]==data[1] || data[1]==data[2]||data[2]==data[3]||data[3]==data[4]||data[4]==data[5])
             {
-                count++;
+                count1++;
             }
             
         }
@@ -43,6 +43,51 @@ int Day4::password()
     }
  
     
-    return count;
+    return count1;
+}
+int Day4::password2()
+{
+    int data[6];
+    int temp,temp1,counter,doubleOk;
+    temp=temp1=counter=doubleOk=0;
+
+  
+
+    for(int i=123257; i<647015;i++)
+    {
+         data[0]= i / 100000 % 10;
+          data[1]= i / 10000 % 10;
+          data[2]= i / 1000 % 10;
+          data[3]= i / 100 % 10;
+          data[4]= i / 10 % 10;
+          data[5]= i % 10;
+        
+        if(data[0]<=data[1]&&data[1]<=data[2]&&data[2]<=data[3]&&data[3]<=data[4]&&data[4]<=data[5])
+        {
+            if(data[0]==data[1]&&data[1]!=data[2])
+            {
+                count2++;
+            }else if(data[3]!=data[4]&&data[4]==data[5])
+            {
+                count2++;
+            }
+            else if(data[0]!=data[1]&&data[1]==data[2]&&data[2]!=data[3])
+            {
+                count2++;
+            }
+            else if(data[1]!=data[2]&&data[2]==data[3]&&data[3]!=data[4])
+            {
+                   count2++;
+             }
+            else if(data[2]!=data[3]&&data[3]==data[4]&&data[4]!=data[5])
+           {
+                   count2++;
+             }
+            
+        }
+    }
+ 
+    
+    return count2;
 }
 
