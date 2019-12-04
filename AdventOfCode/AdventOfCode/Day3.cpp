@@ -14,7 +14,6 @@
 #include <sstream>
 #include <vector>
 
-const int WIDTH=1000, HEIGHT=1000;
 void Day3::processFile()
 {
   
